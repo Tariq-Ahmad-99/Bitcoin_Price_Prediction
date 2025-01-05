@@ -1,4 +1,5 @@
 import os
+import pickle
 import numpy as np
 import yfinance as yf
 import pandas as pd
@@ -53,9 +54,21 @@ model = Sequential([
 ])
 
 model.compile(optimizer="adam", loss="mean_squared_error")
-model.fit(x_train, y_train, batch_size=5, epochs=3)
+model.fit(x_train, y_train, batch_size=5, epochs=30)
 
-# Save model
+# Save the necessary data 
+with open('model/data.pkl', 'wb') as f:
+    pickle.dump({
+        'x_test': x_test,
+        'y_test': y_test,
+        'scaler': scaler,
+        'scaled_data': scaled_data,
+        'close_prices': close_prices,
+        'train_size': train_size,
+        'base_days': base_days
+    }, f)
+
+# Save the model
 folder_name = 'model'
 if not os.path.exists(folder_name):
     os.makedirs(folder_name)
