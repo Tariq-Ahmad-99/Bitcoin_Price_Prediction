@@ -1,6 +1,10 @@
 
 # Crypto Production Project Documentation
 
+![should-i-trust-crypto-price-prediction-services-1692348630](https://github.com/user-attachments/assets/27937db5-6343-43cf-b294-51205d5af5d9)
+
+https://github.com/user-attachments/assets/cd493d9c-3981-465d-b4b1-2223dcdec823
+
 ## Project Overview
 This project involves predicting cryptocurrency prices using an LSTM model and deploying the model through a Flask web application. The project uses Bitcoin (BTC-USD) as the primary example for cryptocurrency price predictions.
 
